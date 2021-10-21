@@ -1,10 +1,11 @@
 let n = 13;
 let str = " ";
-function show(n) {
-  for (let i = 0; i < n; i++) {
+function show(num) {
+  str = " ";
+  for (let i = 0; i < num; i++) {
     str += "| ";
   }
-  alert(n + str);
+  return alert(num + str);
 }
 
 while (n > 0) {
@@ -15,11 +16,7 @@ while (n > 0) {
     break;
   }
   n -= m;
-  str = " ";
-  for (let i = 0; i < n; i++) {
-    str += "| ";
-  }
-  alert(n + str);
+  show(n);
   if (n <= 0) {
     alert("You win!");
     break;
@@ -27,11 +24,7 @@ while (n > 0) {
   alert("My turn!");
   let rand = Math.floor(Math.random() * 3) + 1;
   n -= rand;
-  str = " ";
-  for (let i = 0; i < n; i++) {
-    str += "| ";
-  }
-  alert(n + str);
+  show(n);
   if (n <= 0) {
     alert("You lost");
     break;
